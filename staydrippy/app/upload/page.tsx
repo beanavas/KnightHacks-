@@ -83,7 +83,7 @@ export default function Upload() {
                 </Link>
             </div>
         <section className="my-12 w-1/2">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="flex flex-col items-center text-pink-800">
               {/* Text input for searching */}
               <input
