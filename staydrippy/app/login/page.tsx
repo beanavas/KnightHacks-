@@ -71,7 +71,7 @@ export default function Login() {
           <div className="flex justify-center mt-4">
             <button
               type="submit"
-              className="bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-gray-600"
+              className="bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600"
             >
               Get Started
             </button>
@@ -80,7 +80,7 @@ export default function Login() {
         
         {/* Optional: Link to another page if needed */}
         <div className="flex justify-center mt-4">
-          <Link href="/upload" className="text-pink-500">Skip to Upload</Link>
+          <Link href="/upload" className="text-pink-500">Skip to Outfits</Link>
         </div>
       </div>
     </div>

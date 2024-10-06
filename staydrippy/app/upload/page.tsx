@@ -64,10 +64,10 @@ export default function Upload() {
               {/* Text input for searching */}
               <input
                 type="text"
-                placeholder="Start typing..."
+                placeholder="Category..."
                 value={query}
                 onChange={handleInputChange}
-                className="w-full max-w-md px-4 py-2 border border-grey-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500"
+                className="w-full max-w-md px-6 py-4 border border-grey-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500"
               />
 
               {/* Show suggestions */}
@@ -76,7 +76,7 @@ export default function Upload() {
                   {suggestions.map((suggestion, index) => (
                     <li
                       key={index}
-                      className="px-4 py-2 border-b border-pink-600 hover:bg-gray-100 cursor-pointer"
+                      className="w-full max-w-md px-6 py-4 border border-grey-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500 mx-autor"
                     >
                       {suggestion}
                     </li>
@@ -88,13 +88,23 @@ export default function Upload() {
         </section>
 
         {/* Image section */}
-        <div className="w-1/4 flex justify-center">
-          <img
-            src="assets/girl.png"
-            alt="3D model"
-            className="w-[150px] h-auto object-contain border-4 border-pink-700 rounded-lg"
-          />
-        </div>
+        <div className="w-1/4 flex flex-col items-center">
+  <img
+    src="assets/head.png"
+    alt="3D model 1"
+    className="w-[150px] h-auto object-contain border-4 border-pink-700 rounded-lg mb-4"
+  />
+  <img
+    src="assets/greensweater.png"
+    alt="3D model 2"
+    className="w-[150px] h-auto object-contain border-4 border-pink-700 rounded-lg mb-4"
+  />
+  <img
+    src="assets/bskirt.png"
+    alt="3D model 3"
+    className="w-[150px] h-auto object-contain border-4 border-pink-700 rounded-lg"
+  />
+</div>
       </div>
     </div>
   );
