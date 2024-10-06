@@ -2,13 +2,23 @@ export default function Outfit() {
     // Separate arrays for tops and bottoms
     const tops = [
       '/assets/greensweater.png', 
+      '/assets/redlong.png',
       '/assets/pinktop.png',
+      '/assets/cutebra.png',
+      '/assets/pinklong.png',
+      '/assets/blacklong.png',
+      '/assets/offshoulder.png',
+      '/assets/oneshoulder.png',
+      '/assets/white.png',
       '/assets/yellotop.png'
     ];
   
     const bottoms = [
-      '/assets/orangeskirt.png', 
+      '/assets/oranngeskirtt.png', 
       '/assets/jeansr.png',
+      '/assets/blackpants.png',
+      '/assets/greyskirtt.png',
+      '/assets/slantskirt.png',
       '/assets/girl.png'
     ];
   
