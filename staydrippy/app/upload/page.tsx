@@ -32,7 +32,7 @@ export default function Upload() {
       {/* Home button */}
       <div className="absolute top-4 left-4">
         <Link href="/">
-          <button className="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-gray-600">
+          <button className="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600">
             home
           </button>
         </Link>
@@ -49,9 +49,18 @@ export default function Upload() {
       {/* Main content - Flex container to show form and image side by side */}
       <div className="flex flex-row justify-between items-center">
         {/* Form section */}
+        <div className="flex justify-center mt-4">
+                <Link href="outfit">
+                    <button
+                        className="bg-pink-500 text-white px-6 py-5 rounded-full hover:bg-pink-600" >
+
+                        Your Closet
+                    </button>
+                </Link>
+            </div>
         <section className="my-12 w-1/2">
           <form>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center text-pink-800">
               {/* Text input for searching */}
               <input
                 type="text"
@@ -81,7 +90,7 @@ export default function Upload() {
         {/* Image section */}
         <div className="w-1/4 flex justify-center">
           <img
-            src="/assets/girl.png"
+            src="assets/girl.png"
             alt="3D model"
             className="w-[150px] h-auto object-contain border-4 border-pink-700 rounded-lg"
           />
