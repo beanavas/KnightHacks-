@@ -14,24 +14,18 @@ export default function Home() {
       </h1>
 
       <p className="text-black-500 text-xl sm:block">
-        Use staydrippy to make the right outfit choices for every ocassio. 
+        Use staydrippy to make the right outfit choices for every ocassion. 
       </p>
 
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
-        <a
-          className="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-          href="#"
-        >
-          Log In
-        </a>
-
-        <a
-          className="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
-          href="#"
-        >
-          Learn More
-        </a>
-      </div>
+      <div className="flex justify-center">
+          <Link href="/login">
+            <button
+              className="bg-blue-500 text-white px-10 py-5 rounded-full hover:bg-blue-600"
+            >
+              Log In
+            </button>
+          </Link>
+        </div>
     </div>
   </div>
 </section>
