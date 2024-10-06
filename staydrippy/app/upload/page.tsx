@@ -29,48 +29,64 @@ export default function Upload() {
 
   return (
     <div className="container mx-auto p-8">
+      {/* Home button */}
       <div className="absolute top-4 left-4">
         <Link href="/">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-gray-600">
+          <button className="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-gray-600">
             home
           </button>
         </Link>
       </div>
+
+      {/* Header */}
       <header className="text-center my-12">
-        <h1 className="text-4xl font-bold text-gray-800">Input Dress To Impress category</h1>
-        <p className="mt-4 text-lg text-gray-600">
-          Type in theme to get outfit recommendations to win your game below: 
+        <h1 className="text-4xl font-bold text-pink-800">Input Dress To Impress category</h1>
+        <p className="mt-4 text-lg text-pink-600">
+          Type in theme to get outfit recommendations to win your game below:
         </p>
       </header>
 
-      <section className="my-12">
-        <form>
-          <div className="flex flex-col items-center">
-            {/* Text input for searching */}
-            <input
-              type="text"
-              placeholder="Start typing..."
-              value={query}
-              onChange={handleInputChange}
-              className="w-full max-w-md px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
+      {/* Main content - Flex container to show form and image side by side */}
+      <div className="flex flex-row justify-between items-center">
+        {/* Form section */}
+        <section className="my-12 w-1/2">
+          <form>
+            <div className="flex flex-col items-center">
+              {/* Text input for searching */}
+              <input
+                type="text"
+                placeholder="Start typing..."
+                value={query}
+                onChange={handleInputChange}
+                className="w-full max-w-md px-4 py-2 border border-grey-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500"
+              />
 
-            {/* Show suggestions */}
-            {suggestions.length > 0 && (
-              <ul className="mt-4 bg-white rounded-md shadow-lg w-full max-w-md">
-                {suggestions.map((suggestion, index) => (
-                  <li
-                    key={index}
-                    className="px-4 py-2 border-b border-gray-200 hover:bg-gray-100 cursor-pointer"
-                  >
-                    {suggestion}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </form>
-      </section>
+              {/* Show suggestions */}
+              {suggestions.length > 0 && (
+                <ul className="mt-4 bg-white rounded-md shadow-lg w-full max-w-md">
+                  {suggestions.map((suggestion, index) => (
+                    <li
+                      key={index}
+                      className="px-4 py-2 border-b border-pink-600 hover:bg-gray-100 cursor-pointer"
+                    >
+                      {suggestion}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </form>
+        </section>
+
+        {/* Image section */}
+        <div className="w-1/4 flex justify-center">
+          <img
+            src="/assets/girl.png"
+            alt="3D model"
+            className="w-[150px] h-auto object-contain border-4 border-pink-700 rounded-lg"
+          />
+        </div>
+      </div>
     </div>
   );
 }

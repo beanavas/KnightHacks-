@@ -8,20 +8,20 @@ export default function Home() {
       <section className="bg-gray-50">
   <div className="mx-auto max-w-screen-2xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
     <div className="mx-auto max-w-xl text-center">
-      <h1 className="text-3xl font-extrabold sm:text-5xl">
+      <h1 className="text-3xl font-extrabold text-pink-400 sm:text-5xl mb:3">
       staydrippy
-        <strong className="font-extrabold text-blue-700 sm:block"> choose the perfect outfit </strong>
+        <strong className="font-extrabold text-pink-600 sm:block mb-6"> choose the perfect outfit </strong>
       </h1>
 
-      <p className="text-black-500 text-xl sm:block">
-        Use staydrippy to make the right outfit choices for every ocassion. 
+      <p className="text-pink-600 text-xl sm:block mb-6">
+        Use staydrippy and win every game. 
       </p>
 
       <div className="flex justify-center">
+
           <Link href="/login">
             <button
-              className="bg-blue-500 text-white px-10 py-5 rounded-full hover:bg-blue-600"
-            >
+              className="bg-pink-500 text-white px-10 py-5 rounded-full hover:bg-pink-700" >
               Log In
             </button>
           </Link>
@@ -36,13 +36,12 @@ export default function Home() {
           Upload images of your clothes to create your personal digital closet.
         </p>
         <div className="flex justify-center">
-          <Link href="/upload">
-            <button
-              className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600"
-              // onClick={navigateToUpload} // Use Next.js navigation
-            >
-              Upload Clothes
-            </button>
+        <Link href="upload">
+                    <button
+                        className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-gray-600"
+                    >
+                        Get Started
+                    </button>
           </Link>
         </div>
         <div className="flex justify-center">
