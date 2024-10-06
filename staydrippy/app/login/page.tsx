@@ -79,9 +79,9 @@ export default function Login() {
         </form>
         
         {/* Optional: Link to another page if needed */}
-        <div className="flex justify-center mt-4">
+        {/* <div className="flex justify-center mt-4">
           <Link href="/upload" className="text-pink-500">Skip to Outfits</Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );

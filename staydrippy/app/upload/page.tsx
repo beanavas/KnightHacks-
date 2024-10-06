@@ -1,13 +1,15 @@
 "use client";
 
+import { wardrobe } from "@/data/wardrobeData";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function Upload() {
   const [query, setQuery] = useState("");
   // const [suggestions, setSuggestions] = useState<string[]>([]);
-  const [topId, setTopId] = useState<string>(''); // State to store outfit recommendations
-  const [bottomId, setBottomId] = useState<string>('');
+  const [showFace, setShowFace] = useState<boolean>(false); // State to store outfit recommendations
+  const [topImage, setTopImage] = useState<string>('assets/top.png');
+  const [bottomImage, setBottomImage] = useState<string>('assets/legs.png');
 
   // Example data to be used for recommendations
   // const data = ["dark academia", "90s", "office", "break up", "movie night", "club", "school"];
@@ -22,6 +24,22 @@ export default function Upload() {
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(); // Prevent the default form submission behavior
+
+    function getImageById(id: number, isTop: boolean): string {
+
+      console.log("id in getImageById",id);
+      // Find the item with the matching id
+      const item = wardrobe.find((item) => item.id === +id);
+
+      console.log("item", item);
+
+      
+      // If item is found, return the image string, otherwise return undefined
+      const image =  'assets/' + (item ?  item.image :  isTop ? 'top.png' : 'legs.png');
+
+      console.log(image);
+      return image;
+  }
 
     // Send the user's query to the API
     const response = await fetch('/api/designer', {
@@ -41,10 +59,19 @@ export default function Upload() {
 
       console.log(parsedData);
 
-      const {topIdRaw, bottomIdRaw} = parsedData;
+      const {top_id, bottom_id} = parsedData;
 
-      setTopId(topIdRaw); // Update the state with the received outfits
-      setBottomId(bottomIdRaw);
+      console.log("topIdRaw", top_id);
+
+      const topImage = getImageById(top_id, true);
+      const bottomImage = getImageById(bottom_id, false);
+
+      
+
+
+      setTopImage(topImage); // Update the state with the received outfits
+      setBottomImage(bottomImage);
+      setShowFace(true);
 
     } else {
       console.error('Error fetching outfit recommendations');
@@ -102,17 +129,17 @@ export default function Upload() {
         {/* Image section */}
         <div className="w-1/4 flex flex-col items-center">
   <img
-    src="assets/head.png"
+    src={showFace ? "assets/face.png" : "assets/head.png"}
     alt="3D model 1"
     className="w-[150px] h-auto object-contain border-4 border-pink-700 rounded-lg mb-4"
   />
   <img
-    src="assets/greensweater.png"
+    src={topImage}
     alt="3D model 2"
     className="w-[150px] h-auto object-contain border-4 border-pink-700 rounded-lg mb-4"
   />
   <img
-    src="assets/bskirt.png"
+    src={bottomImage}
     alt="3D model 3"
     className="w-[150px] h-auto object-contain border-4 border-pink-700 rounded-lg"
   />
