@@ -1,0 +1,22 @@
+What is Stay Drippy?
+Imagine an ideal world where you no longer lose your "Dress to Impress" games on Roblox against children, this is where Stay Drippy comes in. Our program makes it effortless and fun! Simply log in and type in a description - anything from "beach day" to "formal business meeting" - and watch the magic happen! Through OpenAI, this program is at the mercy of your fashion creativity. It scans through your wardrobe of clothing images and descriptions and matches your desired description to generate a winner for your games.
+
+Inspiration
+The inspiration initially came from one of our group members not knowing what to wear for a gathering she had, gradually the idea developed to help another one of our group members to start winning in a popular Roblox game "Dress to Impress" (she kept on losing).
+
+How we built it
+We built this project by joining the power of OpenAI and Next.js. Here is the rundown:
+
+On the backend, OpenAI helped analyze the user input to recommend the ideal fit. We created a structured database containing images and descriptions of various clothing items, which the AI uses to match the user's input—whether it's an occasion, style, or mood—with the most relevant clothing options.
+
+On the frontend, we used Next.js to build a responsive and friendly user interface. Users can easily input their preferences, and the AI instantly processes the information to generate personalized outfit recommendations, making for a seamless, engaging experience. By integrating AI with a modern frontend framework, we were able to make a fun and fulfilling way to win your "Dress to Impress" games.
+
+Challenges we ran into
+One of the most significant challenges we faced was implementing the OpenAI API effectively. Adding the API required careful consideration of how to structure user inputs and ensure that the AI could accurately interpret them. We also found it difficult in improving the program to match user descriptions with the correct clothing items, especially when inputs were vague.
+
+How to Get Started
+To get started with your ideal outfit, users will first land on the home page where they can log in to their account. After logging in, they will be directed to a user-friendly page where they can enter input for their scenario/outfit description.
+
+Once the user enters their scenario/outfit description, the AI runs and begins analyzing the input where it then generates an optimized outfit that is tailored to their request. This personalized features ensures that you are always dressed to impress no matter the scenario!
+
+On the same page where you can generate your outfit, you also have the option to view your virtual closet. This feature will allow you to see your clothing items in one convenient location.
